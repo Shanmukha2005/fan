@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .img {
+            height: 40vh;
+            width: 40vh;
+            margin: 30px;
+
+        }
+
+        .all {
+            text-align: center;
+        }
+
+        button {
+            padding: 5px;
+            margin: 10px;
+        }
+
+        .btn1 {
+            color: green;
+            background-color: white;
+        }
+
+        .btn2 {
+            color: red;
+            background-color: white;
+        }
+
+        .btn3 {
+            color: yellow;
+            background-color: black;
+        }
+
+        .btn4 {
+            color: orange;
+            background-color: black;
+        }
+
+        .btn5 {
+            color: red;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body class="all">
+    <h1>Operate Fan!!!</h1>
+    <div>
+        <img class="img" id="image" src="https://rees52.com/cdn/shop/files/RS5626-1.jpg?v=1709418161&width=533">
+        <br><br>
+        <div>
+            <button id="btn1" class="btn1" onclick="onbtn()">ON</button>
+            <button id="btn2" class="btn2" onclick="offbtn()">OFF</button>
+        </div>
+        <br>
+        <div>
+            <h1>Set your speed:</h1>
+            <button id="btn3" class="btn3" onclick="speed1btn()">1</button>
+            <button id="btn4" class="btn4" onclick="speed2btn()">2</button>
+            <button id="btn5" class="btn5" onclick="speed3btn()">3</button>
+        </div>
+    </div>
+    <script>
+        let on = document.getElementById("btn1");
+        let off = document.getElementById("btn2");
+        let b1 = document.getElementById("btn3");
+        let b2 = document.getElementById("btn4");
+        let b3 = document.getElementById("btn5");
+        let img = document.getElementById("image");
+
+        function onbtn() {
+            img.style.animation = "rotate 4s infinite linear";
+        }
+
+        function offbtn() {
+            img.style.animation = "none";
+        }
+
+        function speed1btn() {
+            img.style.animation = "rotate 4s infinite linear";
+        }
+
+        function speed2btn() {
+            img.style.animation = "rotate 2s infinite linear";
+        }
+
+        function speed3btn() {
+            img.style.animation = "rotate 1s infinite linear";
+        }
+    </script>
+</body>
+
+</html>
